@@ -1,6 +1,5 @@
 node_modules/
 .next/
 out/
-public/
 .site-mirror/
 npm-debug.log*
