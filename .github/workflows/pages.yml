@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -30,26 +30,11 @@ jobs:
         with:
           node-version: 22
 
-      - name: Prepare published web artwork
-        id: public-assets
-        env:
-          SOURCE_SITE_URL: https://color-and-rest-magazine.managerbp9.chatgpt.site
+      - name: Verify public artwork
         run: |
-          if [[ -f public/images/mixing-blue.webp && -f public/fonts/noto-serif-kr.ttf ]]; then
-            echo "downloaded=false" >> "$GITHUB_OUTPUT"
-          else
-            bash scripts/fetch-public-assets.sh
-            echo "downloaded=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Preserve web-ready assets
-        if: steps.public-assets.outputs.downloaded == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f public
-          git commit -m "Store web-ready site assets [skip ci]"
-          git push origin HEAD:main
+          test -f public/images/mixing-blue.webp
+          test -f public/fonts/noto-serif-kr.ttf
+          test -f public/favicon.svg
 
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
