@@ -160,8 +160,8 @@ const septemberWorks = [
     "artist": "김선심",
     "scripture": "사사기 6-9장",
     "verse": {
-      "reference": "사사기 7:21",
-      "text": "각기 제자리에 서서 그 진영을 에워싸매"
+      "reference": "사사기 7:2",
+      "text": "이는 이스라엘이 나를 거슬러 스스로 자랑하기를 내 손이 나를 구원하였다 할까 함이니라"
     },
     "width": 2048,
     "height": 1507
@@ -186,8 +186,8 @@ const septemberWorks = [
     "artist": "김청아",
     "scripture": "사사기 6-9장",
     "verse": {
-      "reference": "사사기 7:2",
-      "text": "이는 이스라엘이 나를 거슬러 스스로 자랑하기를 내 손이 나를 구원하였다 할까 함이니라"
+      "reference": "사사기 6:11",
+      "text": "오브라에 이르러 상수리나무 아래에 앉으니라"
     },
     "width": 2047,
     "height": 1465
@@ -395,7 +395,7 @@ export default function Home() {
             <CoverActions essayHref="/essay/march" firstWorkHref="#march-work-1" />
           </div>
           <figure className="month-image march-main-image">
-            <Image unoptimized width={1332} height={2048} src="/images/exhibition-grape-main-v4.webp" alt="포도나무 테이스팅을 위한 조색 물감과 붓의 작업 기록" />
+            <Image unoptimized width={1012} height={1555} src="/images/exhibition-grape-main-v5-natural.webp" alt="포도주와 아몬드 테이스팅을 위한 여러 색의 조색 물감" />
           </figure>
         </section>
 

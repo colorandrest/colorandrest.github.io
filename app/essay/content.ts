@@ -87,7 +87,7 @@ export const marchEssay: EssayEntry = {
   title: "포도주와 아몬드 테이스팅",
   scripture: "요한복음 15장",
   excerpt: "포도주 테이스팅이 ‘숙성된 결과’를 음미하는 것이라면, 아몬드에는 가공되지 않은 채로 존재하는 ‘압축된 본질’의 풍미가 있었다.",
-  coverImage: { src: "/images/exhibition-grape-main-v4.webp", alt: "포도나무 테이스팅을 위한 조색 물감과 붓의 작업 기록", width: 1332, height: 2048 },
+  coverImage: { src: "/images/exhibition-grape-main-v5-natural.webp", alt: "포도주와 아몬드 테이스팅을 위한 여러 색의 조색 물감", width: 1012, height: 1555 },
   image: { src: "/images/essay-march-almond.jpg", alt: "흰 종이 상자 안에 놓인 아몬드 한 알", width: 1536, height: 952 },
   blocks: [
     { type: "paragraph", text: "와인 문화에서 인상 깊었던 것은 맛을 표현하는 용어의 다양성이었다. 단순히 맛이 있고 없고가 아니라 그 미묘함을 구체적으로 정리하는 기준이 있었다. 그리고 그것의 연장선에서 더 인상적이었던 것은 맛을 느낀 후 다시 뱉어내는 ‘스피팅’이다. 이는 격식 있는 분위기와 이질적으로 보이지만, 애호가들이 비매너처럼 보이기까지 하는 그 행동을 하면서까지 ‘단순히 취하지 않고’ 와인을 음미하고 해석하는 일에 얼마나 진심인지를 보여준다." },
