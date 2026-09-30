@@ -307,8 +307,7 @@ export const septemberEssay: EssayEntry = {
     "src": "/images/september-oh-hangyeol-color-v24.webp",
     "alt": "푸른색과 초록색이 번진 나무 주변에 흰 여백을 남긴 오한결님의 하얀 여백 작품",
     "width": 2048,
-    "height": 1449,
-    "caption": "오한결 · 하얀 여백"
+    "height": 1449
   },
   "blocks": [
     {
