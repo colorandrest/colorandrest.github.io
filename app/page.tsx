@@ -98,7 +98,7 @@ const augustWorks = [
     artist: "김선심",
     scripture: "이사야 28–35장",
     verse: {
-      reference: "이사야 25:4 · 본문 외 참고구절",
+      reference: "이사야 25:4",
       text: "폭풍 중의 피난처시며 폭양을 피하는 그늘이 되셨사오니.",
     },
   },
