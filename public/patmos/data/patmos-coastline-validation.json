@@ -1,0 +1,73 @@
+{
+  "sourceUrl": "https://api.openstreetmap.org/api/0.6/relation/533714/full.json",
+  "sourceDate": "2024-12-07T19:25:21Z",
+  "retrievedAt": "2026-10-03T10:40:01.131Z",
+  "relationTimestamp": "2023-09-12T14:35:08Z",
+  "relationVersion": 18,
+  "sourceDateMeaning": "Latest edit timestamp among the downloaded OSM relation, ways and nodes; not survey acquisition date.",
+  "downloadMethod": "Official OpenStreetMap API fallback after Overpass API returned HTTP 406.",
+  "scope": "Patmos main island only; no synthetic or inferred geometry.",
+  "coordinateReferenceSystem": "WGS84 longitude/latitude (GeoJSON / EPSG:4326)",
+  "vertexCountIncludingClosure": 2631,
+  "uniqueVertexCount": 2630,
+  "closed": true,
+  "internalRepeatedNodeCount": 0,
+  "properSelfIntersectionCount": 0,
+  "winding": "counterclockwise",
+  "reversedForGeoJSON": false,
+  "bounds": [
+    26.5255318,
+    37.2687988,
+    26.6142973,
+    37.3807027
+  ],
+  "stitchedWays": [
+    {
+      "id": 4892178,
+      "reversed": false
+    },
+    {
+      "id": 53197279,
+      "reversed": false
+    },
+    {
+      "id": 371573424,
+      "reversed": false
+    },
+    {
+      "id": 380373725,
+      "reversed": false
+    },
+    {
+      "id": 380373724,
+      "reversed": false
+    },
+    {
+      "id": 386369512,
+      "reversed": false
+    },
+    {
+      "id": 386369509,
+      "reversed": false
+    },
+    {
+      "id": 53197196,
+      "reversed": false
+    }
+  ],
+  "segmentLengthMeters": {
+    "minimum": 0.7224667950063365,
+    "median": 19.411629861209594,
+    "maximum": 294.83805030868064
+  },
+  "approximatePerimeterMeters": 75100.27023674875,
+  "approximateAreaSquareKilometers": 33.969513194818084,
+  "dataLimitations": [
+    "OSM edit dates do not establish when each shoreline segment was surveyed or imaged.",
+    "Some component ways retain Landsat source tags; vertex density does not establish absolute positional accuracy.",
+    "Current shoreline mapping may include modern harbour works and cannot alone reconstruct the first-century shore."
+  ],
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "attributionUrl": "https://www.openstreetmap.org/copyright"
+}

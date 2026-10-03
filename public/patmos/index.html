@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#12363e">
+ <title>밧모섬 · 자유 탐험</title>
+ <meta name="description" content="실제 해안선과 고도를 바탕으로 밧모섬의 능선과 만을 자유롭게 탐험하세요.">
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312363e'/%3E%3Cpath d='M8 23l4-7-2-5 8-5 3 7-5 5 3 8z' fill='%23e8dbbc'/%3E%3C/svg%3E">
+ <link rel="stylesheet" href="./style.css">
+ <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+ <script type="module" src="./app.js"></script>
+</head>
+<body>
+ <main id="world" aria-label="밧모섬 자유 탐험" tabindex="0"></main>
+ <div id="loading" role="status"><span class="island-mark">Π</span><strong>밧모섬을 펼치는 중</strong><span id="load-detail">해안선과 고도를 불러옵니다</span></div>
+ <header class="hud topbar">
+  <div class="identity"><span class="wordmark">PATMOS</span><span class="divider"></span><span>자유 탐험</span><span class="version">지형 연구 01</span></div>
+  <div class="top-actions"><button id="map-toggle" aria-expanded="true" aria-controls="map-panel">지도 <kbd>M</kbd></button><button id="help-toggle" aria-expanded="false" aria-controls="help-panel">조작법</button><button id="info-toggle" aria-expanded="false" aria-controls="info-panel">지형 자료</button><button id="hide-ui" title="H 키로 다시 표시">화면 비우기 <kbd>H</kbd></button></div>
+ </header>
+ <div class="hud compass" aria-label="나침반"><span id="heading">서 270°</span><div class="compass-line"><i></i><b></b><i></i></div></div>
+ <aside id="map-panel" class="hud glass map-panel">
+  <div class="panel-heading"><span>밧모섬</span><span class="muted">북 ↑</span></div>
+  <canvas id="map" width="440" height="510" aria-label="지형 지도. 클릭한 위치로 이동합니다."></canvas>
+  <p class="map-tip">원하는 곳을 눌러 이동</p>
+  <div class="map-scale"><span></span>2 km</div>
+ </aside>
+ <aside id="help-panel" class="hud glass text-panel" hidden>
+  <div class="panel-heading">어디로든, 원하는 속도로<button data-close="help-panel" aria-label="조작법 닫기">×</button></div>
+  <p>화면을 누르면 마우스로 둘러봅니다. <kbd>Esc</kbd>로 마우스를 놓습니다. 드래그로 시선을 돌릴 수도 있습니다.</p>
+  <dl><dt>이동</dt><dd><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 또는 방향키</dd><dt>빠르게</dt><dd><kbd>Shift</kbd> 누르기</dd><dt>비행 중 상승 / 하강</dt><dd><kbd>E</kbd> / <kbd>Q</kbd></dd><dt>걷기 / 비행 전환</dt><dd><kbd>F</kbd></dd><dt>화면 숨기기 / 복원</dt><dd><kbd>H</kbd></dd></dl>
+  <p class="muted">걷기는 사람 눈높이입니다. 가파른 경사는 비행으로 살펴볼 수 있습니다. 물에 들어가면 수면 높이에서 이동합니다.</p>
+ </aside>
+ <aside id="info-panel" class="hud glass text-panel" hidden>
+  <div class="panel-heading">지형의 기준<button data-close="info-panel" aria-label="지형 자료 닫기">×</button></div>
+  <p>가로 거리와 높이에 같은 미터 단위를 씁니다. 고도 과장과 계단식 지형을 제거했습니다.</p>
+  <p>본섬 해안선은 <strong>OpenStreetMap의 2,630개 점</strong>, 고도는 기존 아틀라스의 <strong>약 30m 간격 Terrarium 자료</strong>에 기반합니다. 주변 여섯 섬은 기존의 단순화된 해안선을 사용합니다.</p>
+  <p>고도 표본 사이를 연결한 지형이므로 작은 바위·동굴·해안 절벽은 실제 모습과 다를 수 있습니다. 바닷가 경계는 해수면 높이에 맞췄습니다.</p>
+  <p>현재는 현대 지리 자료로 만든 자연 지형 기반입니다. 요한계시록의 시대를 재구성한 풍경과 시대 전환은 제작 중입니다. 현재 화면은 지형·이동 연구본입니다. 땅의 색과 물결·날씨는 표현이며 실측 자료가 아닙니다.</p>
+  <p class="sources"><a href="https://www.openstreetmap.org/relation/533714" target="_blank" rel="noreferrer">해안선 · © OpenStreetMap 기여자</a><a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md" target="_blank" rel="noreferrer">고도 · Tilezen 자료 출처</a><a href="./data/patmos-coastline-full.geojson" download>해안선 원자료 · ODbL</a></p>
+ </aside>
+ <div id="notice" role="status"></div>
+ <div id="crosshair" hidden>+</div>
+ <footer class="hud bottom-bar">
+  <div class="telemetry"><span id="location-name">스칼라 앞바다</span><span id="coordinates">37.32500° N · 26.55000° E</span><span id="altitude">해발 — m</span></div>
+  <div class="glass controls">
+   <div class="segmented" role="group" aria-label="탐험 방식"><button id="walk" aria-pressed="false">걷기</button><button id="fly" aria-pressed="true">자유 비행</button></div>
+   <label class="control speed-control"><span>비행 속도 <output id="speed-value">80 m/s</output></span><input id="speed" type="range" min="10" max="240" step="10" value="80"></label>
+   <label class="control"><span>시간 <output id="time-value">15:00</output></span><input id="time" type="range" min="6" max="19.5" step="0.1" value="15"></label>
+   <label class="weather-control"><span>날씨</span><select id="weather"><option value="clear">맑음</option><option value="overcast">흐림</option><option value="rain">비</option></select></label>
+  </div>
+  <div class="bottom-hint"><span>화면 클릭 · 둘러보기 <span class="dot">·</span> WASD 이동 <span class="dot">·</span> E / Q 높이</span><span>실제 비례 1:1</span></div>
+ </footer>
+ <div class="touch-controls hud" aria-label="터치 이동"><div id="joystick"><span></span></div><div class="touch-height"><button id="touch-up" aria-label="상승">＋</button><button id="touch-down" aria-label="하강">−</button></div></div>
+ <button id="restore-ui" hidden>화면 복원</button>
+</body>
+</html>
