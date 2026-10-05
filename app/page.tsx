@@ -129,10 +129,10 @@ const augustWorks = [
 const septemberWorks = [
   {
     "src": "/images/september-kim-minkyung.jpg",
-    "alt": "파란 색면 중앙에 큰 흰 여백이 있고 아래에는 연두색과 노란색 띠가 이어지는 김민경님의 하얀 여백 작품",
-    "title": "하얀 여백",
+    "alt": "파란 색면 중앙에 큰 흰 여백이 있고 아래에는 연두색과 노란색 띠가 이어지는 김민경님의 하얀 안개 작품",
+    "title": "하얀 안개",
     "artist": "김민경",
-    "scripture": "사사기 6-9장",
+    "scripture": "사사기 6-16장",
     "verse": {
       "reference": "사사기 6:18",
       "text": "내가 너 돌아올 때까지 머무르리라"
@@ -142,10 +142,10 @@ const septemberWorks = [
   },
   {
     "src": "/images/september-hwang-yujeong-color-v31.webp",
-    "alt": "위쪽의 파란 색면과 아래쪽 노랑·초록 식물 형태 사이로 밝은 여백이 펼쳐지는 황유정님의 하얀 여백 작품",
-    "title": "하얀 여백",
+    "alt": "위쪽의 파란 색면과 아래쪽 노랑·초록 식물 형태 사이로 밝은 여백이 펼쳐지는 황유정님의 하얀 안개 작품",
+    "title": "하얀 안개",
     "artist": "황유정",
-    "scripture": "사사기 6-9장",
+    "scripture": "사사기 6-16장",
     "verse": {
       "reference": "사사기 6:23",
       "text": "너는 안심하라 두려워하지 말라"
@@ -155,10 +155,10 @@ const septemberWorks = [
   },
   {
     "src": "/images/september-kim-sunsim.jpg",
-    "alt": "흰 바탕에 연두색과 청록색 나무들이 늘어서 있고 아래에 황토색과 노란색 땅이 펼쳐지는 김선심님의 하얀 여백 작품",
-    "title": "하얀 여백",
+    "alt": "흰 바탕에 연두색과 청록색 나무들이 늘어서 있고 아래에 황토색과 노란색 땅이 펼쳐지는 김선심님의 하얀 안개 작품",
+    "title": "하얀 안개",
     "artist": "김선심",
-    "scripture": "사사기 6-9장",
+    "scripture": "사사기 6-16장",
     "verse": {
       "reference": "사사기 7:2",
       "text": "이는 이스라엘이 나를 거슬러 스스로 자랑하기를 내 손이 나를 구원하였다 할까 함이니라"
@@ -168,10 +168,10 @@ const septemberWorks = [
   },
   {
     "src": "/images/september-oh-hangyeol-color-v24.webp",
-    "alt": "노랑과 연두, 청록이 겹친 넓은 나무 수관 아래에 여러 줄기가 서 있고 주변은 옅은 청회색으로 번지는 오한결님의 하얀 여백 작품",
-    "title": "하얀 여백",
+    "alt": "노랑과 연두, 청록이 겹친 넓은 나무 수관 아래에 여러 줄기가 서 있고 주변은 옅은 청회색으로 번지는 오한결님의 하얀 안개 작품",
+    "title": "하얀 안개",
     "artist": "오한결",
-    "scripture": "사사기 6-9장",
+    "scripture": "사사기 6-16장",
     "verse": {
       "reference": "사사기 6:16",
       "text": "내가 반드시 너와 함께 하리니"
@@ -181,10 +181,10 @@ const septemberWorks = [
   },
   {
     "src": "/images/september-kim-cheonga-color-v24.webp",
-    "alt": "보라색 테두리 안 흰 바탕에 노랑과 연두 색면, 중앙의 짙은 청록색이 겹쳐 있는 김청아님의 하얀 여백 작품",
-    "title": "하얀 여백",
+    "alt": "보라색 테두리 안 흰 바탕에 노랑과 연두 색면, 중앙의 짙은 청록색이 겹쳐 있는 김청아님의 하얀 안개 작품",
+    "title": "하얀 안개",
     "artist": "김청아",
-    "scripture": "사사기 6-9장",
+    "scripture": "사사기 6-16장",
     "verse": {
       "reference": "사사기 6:11",
       "text": "오브라에 이르러 상수리나무 아래에 앉으니라"
@@ -194,10 +194,10 @@ const septemberWorks = [
   },
   {
     "src": "/images/september-ryu-gwangryul-color-v24.webp",
-    "alt": "분홍색 바탕을 가로질러 빨강과 노랑, 진한 파랑의 색면이 대각선으로 이어지고 그 사이에 흰 틈이 남아 있는 류광률님의 하얀 여백 작품",
-    "title": "하얀 여백",
+    "alt": "분홍색 바탕을 가로질러 빨강과 노랑, 진한 파랑의 색면이 대각선으로 이어지고 그 사이에 흰 틈이 남아 있는 류광률님의 하얀 안개 작품",
+    "title": "하얀 안개",
     "artist": "류광률",
-    "scripture": "사사기 6-9장",
+    "scripture": "사사기 6-16장",
     "verse": {
       "reference": "사사기 6:24",
       "text": "기드온이 여호와를 위하여 거기서 제단을 쌓고 그것을 여호와 살롬이라 하였더라"
@@ -507,15 +507,15 @@ export default function Home() {
 
         <section id="september" className="snap-panel month-panel split-image-panel september-panel" data-snap-panel data-month="09">
           <div className="month-copy compact-copy">
-            <p className="eyebrow">SEPTEMBER / JUDGES 6–9</p>
+            <p className="eyebrow">SEPTEMBER / JUDGES 6–16</p>
             <div className="month-number inline-number" aria-hidden="true">09</div>
-            <h2>하얀 여백</h2>
-            <p className="scripture-label">사사기 6-9장</p>
+            <h2>하얀 안개</h2>
+            <p className="scripture-label">사사기 6-16장</p>
             <p className="feature-quote">여백이 나를 채우도록 기다린다.</p>
             <CoverActions essayHref="/essay/september" firstWorkHref="#september-work-1" />
           </div>
           <figure className="month-image september-cover-image">
-            <Image unoptimized width={1448} height={1086} src="/images/september-palette-refined.png" alt="흰 조색 바탕 위에 보라색과 흰색 물감이 길게 섞이고 노란 물감이 놓인 하얀 여백 조색 과정" />
+            <Image unoptimized width={1448} height={1086} src="/images/september-palette-refined.png" alt="흰 조색 바탕 위에 보라색과 흰색 물감이 길게 섞이고 노란 물감이 놓인 하얀 안개 조색 과정" />
           </figure>
         </section>
 
