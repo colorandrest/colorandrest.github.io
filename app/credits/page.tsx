@@ -74,9 +74,9 @@ export default function CreditsPage() {
             <div className="year-review-overview">
               <h2>2026년의 기록</h2>
               <p className="year-review-summary">
-                2026년의 색채 활동 주제는 창세기에서 시작해 요한복음, 다시 창세기,
-                고린도전서, 시편, 이사야 ... 순으로 매일성경의 본문 일정에 따라
-                진행됩니다.
+                2026년의 색채 활동은 창세기에서 시작해 요한복음, 다시 창세기,
+                고린도전서, 시편, 이사야, 사사기, 야고보서로 이어졌습니다.
+                3월부터 10월까지는 매일성경의 본문 일정에 따라 진행했습니다.
               </p>
             </div>
           </div>
@@ -85,3 +85,4 @@ export default function CreditsPage() {
     </>
   );
 }
+

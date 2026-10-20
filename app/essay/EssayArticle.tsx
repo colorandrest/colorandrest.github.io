@@ -95,18 +95,23 @@ export default function EssayArticle({ entry }: { entry: EssayEntry }) {
             </figure>
           )}
 
-          {exhibitionAnchor && (
-            <Link className="text-link article-exhibition-return" href={`/#${exhibitionAnchor}`}>
-              전시로 돌아가기 <span>↗</span>
+          <nav className="article-navigation" aria-label="에세이 읽기 후 이동">
+            {exhibitionAnchor && (
+              <Link className="text-link article-navigation-primary" href={`/#${exhibitionAnchor}`}>
+                전시로 돌아가기 <span aria-hidden="true">↗</span>
+              </Link>
+            )}
+            <Link className="text-link" href="/essay">
+              월별 에세이 목록으로 <span aria-hidden="true">→</span>
             </Link>
-          )}
+          </nav>
 
           <footer className="article-footer">
             <span>{entry.index} / {entry.title} · {entry.scripture}</span>
-            <Link href="/essay">월별 에세이 목록으로 <b>→</b></Link>
           </footer>
         </article>
       </main>
     </>
   );
 }
+
