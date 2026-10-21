@@ -54,17 +54,6 @@ export default function CreditsPage() {
                   <p className="person-name">김강산</p>
                 </div>
                 <div>
-                  <span>문의</span>
-                  <p>
-                    <a
-                      href="mailto:managerbp9@gmail.com"
-                      style={{ textDecoration: "underline", textUnderlineOffset: "0.2em", overflowWrap: "anywhere" }}
-                    >
-                      managerbp9@gmail.com
-                    </a>
-                  </p>
-                </div>
-                <div>
                   <span>참여 작가</span>
                   <p className="artist-credit-list person-name">{participatingArtists.join(" · ")}</p>
                 </div>
@@ -87,6 +76,23 @@ export default function CreditsPage() {
               <p className="year-review-summary">
                 2026년의 색채와 쉼 활동은 매일성경의 본문 일정에 맞춰 창세기, 요한복음, 고린도전서, 시편, 이사야, 사사기, 야고보서에 대한 개인 묵상을 바탕으로 기획되었습니다. 그룹 활동은 3월부터 10월까지 교회 클럽 사역의 일정에 따라 진행되었습니다.
               </p>
+              <div
+                className="year-review-credits"
+                aria-label="문의"
+                style={{ marginTop: "clamp(24px, 3vh, 36px)" }}
+              >
+                <div>
+                  <span>문의</span>
+                  <p>
+                    <a
+                      href="mailto:managerbp9@gmail.com"
+                      style={{ textDecoration: "underline", textUnderlineOffset: "0.2em", overflowWrap: "anywhere" }}
+                    >
+                      managerbp9@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
