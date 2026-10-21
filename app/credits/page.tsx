@@ -54,6 +54,17 @@ export default function CreditsPage() {
                   <p className="person-name">김강산</p>
                 </div>
                 <div>
+                  <span>문의</span>
+                  <p>
+                    <a
+                      href="mailto:managerbp9@gmail.com"
+                      style={{ textDecoration: "underline", textUnderlineOffset: "0.2em", overflowWrap: "anywhere" }}
+                    >
+                      managerbp9@gmail.com
+                    </a>
+                  </p>
+                </div>
+                <div>
                   <span>참여 작가</span>
                   <p className="artist-credit-list person-name">{participatingArtists.join(" · ")}</p>
                 </div>
