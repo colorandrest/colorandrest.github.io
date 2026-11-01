@@ -3632,6 +3632,15 @@ img {
 }
 
 /* Use the shared exhibition frame and keep both paint colors in the crop. */
+.month-image.october-cover-image img {
+  object-position: 67% center;
+}
+
+.article-hero-image.october-cover-image img {
+  object-fit: contain;
+  object-position: center;
+}
+
 .month-image.september-cover-image img {
   object-fit: cover;
   object-position: 60% center;

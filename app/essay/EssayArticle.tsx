@@ -12,7 +12,16 @@ const exhibitionAnchors: Record<string, string> = {
   "07": "july",
   "08": "august",
   "09": "september",
+  "10": "october",
 };
+
+function InlineText({ text }: { text: string }) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) =>
+    part.startsWith("**") && part.endsWith("**")
+      ? <strong key={index}>{part.slice(2, -2)}</strong>
+      : part,
+  );
+}
 
 function EssayHeader() {
   return (
@@ -46,7 +55,7 @@ export default function EssayArticle({ entry }: { entry: EssayEntry }) {
             <p className="article-scripture">{entry.scripture}</p>
             <p className="article-cover-excerpt">{coverExcerpt}</p>
           </div>
-          <figure className={`article-hero-image ${entry.coverImage ? "" : "article-hero-placeholder"} ${entry.index === "09" ? "september-cover-image" : ""}`}>
+          <figure className={`article-hero-image ${entry.coverImage ? "" : "article-hero-placeholder"} ${entry.index === "09" ? "september-cover-image" : ""} ${entry.index === "10" ? "october-cover-image" : ""}`}>
             {entry.coverImage ? (
               <Image
                 unoptimized
@@ -85,7 +94,7 @@ export default function EssayArticle({ entry }: { entry: EssayEntry }) {
             if (block.type === "lines") {
               return <p className="article-lines" key={`${block.type}-${index}`}>{block.text}</p>;
             }
-            return <p key={`${block.type}-${index}`}>{block.text}</p>;
+            return <p key={`${block.type}-${index}`}><InlineText text={block.text} /></p>;
           })}
 
           {entry.image && (

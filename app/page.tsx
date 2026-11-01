@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import SnapController from "./components/SnapController";
 
-type MonthKey = "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09";
+type MonthKey = "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10";
 type RailKey = "00" | MonthKey;
 
 type Work = {
@@ -34,6 +34,7 @@ const monthLinks: { month: MonthKey; id: string }[] = [
   { month: "07", id: "july" },
   { month: "08", id: "august" },
   { month: "09", id: "september" },
+  { month: "10", id: "october" },
 ];
 
 const railLinks: { key: RailKey; id: string; ariaLabel: string }[] = [
@@ -207,6 +208,16 @@ const septemberWorks = [
   }
 ] satisfies Work[];
 
+const octoberWorks = [
+  { src: "/images/october-kim-minkyung.jpg", width: 988, height: 708, alt: "김민경님의 노란 들판과 짙은 초록색 경계가 겹겹이 이어지는 두 마음의 고향 작품", title: "두 마음의 고향", artist: "김민경", scripture: "야고보서 1–5장", verse: { reference: "야고보서 1:3", text: "이는 너희 믿음의 시련이 인내를 만들어 내는 줄 너희가 앎이라" } },
+  { src: "/images/october-kim-sunsim.jpg", width: 2048, height: 1440, alt: "김선심님의 깊은 파랑과 밝은 노랑이 대비되는 계단식 들판, 두 마음의 고향 작품", title: "두 마음의 고향", artist: "김선심", scripture: "야고보서 1–5장", verse: { reference: "야고보서 1:8", text: "두 마음을 품어 모든 일에 정함이 없는 자로다" } },
+  { src: "/images/october-kim-cheonga.jpg", width: 2048, height: 1364, alt: "김청아님의 밝은 하늘 아래 연둣빛 언덕과 작은 붉은 색점이 놓인 두 마음의 고향 작품", title: "두 마음의 고향", artist: "김청아", scripture: "야고보서 1–5장", verse: { reference: "야고보서 3:18", text: "화평하게 하는 자들은 화평으로 심어 의의 열매를 거두느니라" } },
+  { src: "/images/october-ryu-gwangryul.jpg", width: 2048, height: 1440, alt: "류광률님의 옅은 노랑과 초록, 붉은 흙빛이 여러 겹 쌓인 두 마음의 고향 작품", title: "두 마음의 고향", artist: "류광률", scripture: "야고보서 1–5장", verse: { reference: "야고보서 5:8", text: "너희도 길이 참고 마음을 굳건하게 하라" } },
+  { src: "/images/october-oh-hangyeol.jpg", width: 2048, height: 1407, alt: "오한결님의 차분한 노랑과 청록색 경계가 층층이 남아 있는 두 마음의 고향 작품", title: "두 마음의 고향", artist: "오한결", scripture: "야고보서 1–5장", verse: { reference: "야고보서 4:8", text: "두 마음을 품은 자들아 마음을 성결하게 하라" } },
+  { src: "/images/october-lee-youngsook.jpg", width: 2048, height: 1435, alt: "이영숙님의 노란 바탕에 길과 돌담처럼 분명한 푸른 선이 이어지는 두 마음의 고향 작품", title: "두 마음의 고향", artist: "이영숙", scripture: "야고보서 1–5장", verse: { reference: "야고보서 2:22", text: "믿음이 그의 행함과 함께 일하고 행함으로 믿음이 온전하게 되었느니라" } },
+  { src: "/images/october-hwang-yujeong.jpg", width: 2048, height: 1387, alt: "황유정님의 노란 들판에 초록색 구획과 붉은 열매 같은 색면이 놓인 두 마음의 고향 작품", title: "두 마음의 고향", artist: "황유정", scripture: "야고보서 1–5장", verse: { reference: "야고보서 5:7", text: "농부가 땅에서 나는 귀한 열매를 바라고 길이 참아 이른 비와 늦은 비를 기다리나니" } },
+] satisfies Work[];
+
 function FixedHeader() {
   return (
     <header className="site-header">
@@ -331,7 +342,7 @@ export default function Home() {
               한 달에 한 번씩 성경의 한 장면을 묵상하며 공동체와 함께 그린 색채 활동을 기록합니다.
             </p>
             <div className="status-note">
-              <span className="issue-meta">VOL. 01 · ISSUE 09 · 2026</span>
+              <span className="issue-meta">VOL. 01 · ISSUE 10 · 2026</span>
               <span className="update-note">매월 새로운 이야기가 업데이트됩니다.</span>
             </div>
           </div>
@@ -521,6 +532,24 @@ export default function Home() {
 
         {septemberWorks.map((work, index) => (
           <ArtworkPanel key={work.src} month="09" index={index} work={work} />
+        ))}
+
+        <section id="october" className="snap-panel month-panel split-image-panel october-panel" data-snap-panel data-month="10">
+          <div className="month-copy compact-copy">
+            <p className="eyebrow">OCTOBER / JAMES 1–5</p>
+            <div className="month-number inline-number" aria-hidden="true">10</div>
+            <h2>두 마음의 고향</h2>
+            <p className="scripture-label">야고보서 1–5장</p>
+            <p className="feature-quote">빛을 통해 전해지는 말씀이 아직 설득되지 않은 또 다른 마음을 기다린다.</p>
+            <CoverActions essayHref="/essay/october" firstWorkHref="#october-work-1" />
+          </div>
+          <figure className="month-image october-cover-image">
+            <Image unoptimized width={1541} height={1213} src="/images/october-cover.jpg" alt="레몬 옐로우와 피콕 블루 물감, 종이 위에 두 색을 겹친 두 마음의 고향 채색 과정" />
+          </figure>
+        </section>
+
+        {octoberWorks.map((work, index) => (
+          <ArtworkPanel key={work.src} month="10" index={index} work={work} />
         ))}
       </SnapController>
     </>
